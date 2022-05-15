@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color4"
+    tools:context=".AddActivity">
+
+    <!--edit text for note title-->
+    <EditText
+        android:id="@+id/idEdtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Enter Title"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <EditText
+        android:id="@+id/idEdtYear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtTitle"
+        android:layout_margin="10dp"
+        android:hint="Enter Year"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <EditText
+        android:id="@+id/idEdtType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtYear"
+        android:layout_margin="10dp"
+        android:hint="Enter Type"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <EditText
+        android:id="@+id/idEdtCountry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtType"
+        android:layout_margin="10dp"
+        android:hint="Enter Country"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+    <EditText
+        android:id="@+id/idEdtGender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idEdtCountry"
+        android:layout_margin="10dp"
+        android:hint="Enter Gender"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <!--edit text for note description-->
+    <EditText
+        android:id="@+id/idEdtNoteLink"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/idBtn"
+        android:layout_below="@id/idEdtGender"
+        android:layout_margin="10dp"
+        android:background="@color/color1"
+        android:gravity="start|top"
+        android:hint="Enter your url"
+        android:inputType="textMultiLine"
+        android:singleLine="false"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white" />
+
+    <!--button for saving and updating a note-->
+    <android.widget.Button
+        android:id="@+id/idBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/button_design"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
