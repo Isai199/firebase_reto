@@ -38,7 +38,26 @@ class MainActivity : AppCompatActivity() {
                 myRef.child("movie").get().addOnSuccessListener { response ->
                     Log.d("firebaseResponse",response.value.toString())
 
-                   val jsonArray = JSONArray(response.value.toString())
+
+                    val resmap = response.value as ArrayList<Map<String, Any>>
+                    var myarrayjson: Array<JSONObject> = arrayOf()
+
+                    Log.d("firebaseResponse",resmap.toString())
+                    resmap.forEach{ card ->
+
+                        if(!card.isNullOrEmpty()){
+                            Log.d("firebaseResponse", "por clave: ${card}")
+                           val myjson = JSONObject(card)
+
+                            myarrayjson += arrayOf(myjson)
+                        }
+
+                    }
+
+
+                    //metodo 1
+
+                   /*val jsonArray = JSONArray(response.value.toString())
                     var myarrayjson: Array<JSONObject> = arrayOf()
 
                     for (i in 1 until jsonArray.length()) {
@@ -56,7 +75,7 @@ class MainActivity : AppCompatActivity() {
                         }
 
 
-                    }
+                    }*/
 
                     //Log.d("firebaseResponse",myjson.toString())
 

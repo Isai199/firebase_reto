@@ -49,8 +49,8 @@ class MovieAdapter( val context: Context, private val movies: Array<JSONObject>)
 
                 //codigo para redireccionar a pagina con el cartel de la pelicula
 
-                /*val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                context?.startActivity(browserIntent)*/
+                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+                context?.startActivity(browserIntent)
                 /*val intent = Intent(Intent.ACTION_VIEW)
                 intent.data = Uri.parse(url)
                 startActivity(intent)*/
